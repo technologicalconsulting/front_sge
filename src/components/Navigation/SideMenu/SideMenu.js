@@ -4,13 +4,13 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import * as Icon from "react-feather";
 import "./SideMenu.css";
 
-class SideMenuLight extends React.Component {
+class SideMenu extends React.Component {
   render() {
     return (
       <div
-        className={`sidemenu-area sidemenu-light ${
-          this.props.sideMenu ? "" : "sidemenu-toggle"
-        }`}
+        className={`sidemenu-area ${
+          this.props.dark ? "" : "sidemenu-light"
+        } ${this.props.sideMenu ? "" : "sidemenu-toggle"}`}
       >
         <Navbar
           className={`sidemenu ${this.props.sideMenu ? "" : "hide-nav-title"}`}
@@ -435,4 +435,4 @@ class SideMenuLight extends React.Component {
   }
 }
 
-export default SideMenuLight;
+export default SideMenu;

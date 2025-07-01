@@ -6,9 +6,10 @@ class ColorSwitch extends React.Component {
   };
 
   onSideMenuHandler = () => {
-    const sideMenu = this.state.darkMenu;
-    this.setState({ darkMenu: !sideMenu });
-    this.props.onClick(sideMenu);
+    this.setState(
+      (state) => ({ darkMenu: !state.darkMenu }),
+      () => this.props.onClick(this.state.darkMenu)
+    );
   };
 
   render() {

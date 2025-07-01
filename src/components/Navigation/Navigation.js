@@ -18,9 +18,7 @@ import {
 import ColorSwitch from "../Common/ColorSwitch";
 
 // Default dark side menu
-import SideMenuDark from "./SideMenu/SideMenuDark";
-// If want to active light sidebar then please uncomment below & comment above component
-import SideMenuLight from "./SideMenu/SideMenuLight";
+import SideMenu from "./SideMenu/SideMenu";
 
 // Logo image path
 import Logo from "../../assets/img/logo.png";
@@ -35,7 +33,7 @@ class Navigation extends React.Component {
   state = {
     sideMenu: false,
     term: "",
-    menuColor: true,
+    darkMenu: false,
   };
 
   _toggleClass = () => {
@@ -52,7 +50,7 @@ class Navigation extends React.Component {
   };
 
   onSideMenuHandler = (activeColor) => {
-    this.setState({ menuColor: activeColor });
+    this.setState({ darkMenu: activeColor });
   };
 
   render() {
@@ -382,11 +380,7 @@ class Navigation extends React.Component {
         </Navbar>
 
         {/* Side Menu File Path: src/components/Navigation/SideMenu/SideMenu.js */}
-        {!this.state.menuColor ? (
-          <SideMenuDark sideMenu={this.state.sideMenu} />
-        ) : (
-          <SideMenuLight sideMenu={this.state.sideMenu} />
-        )}
+        <SideMenu sideMenu={this.state.sideMenu} dark={this.state.darkMenu} />
 
         {/*  */}
 
