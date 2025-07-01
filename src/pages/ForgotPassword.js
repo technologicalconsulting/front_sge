@@ -8,7 +8,7 @@ import Logo from "../assets/img/logo.png";
 
 class ForgotPassword extends React.Component {
   onForgotHandler = () => {
-    this.props.history.push("/");
+    this.props.history.push("/login/");
   };
 
   render() {

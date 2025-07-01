@@ -8,7 +8,7 @@ import Logo from "../assets/img/logo.png";
 
 class Login extends React.Component {
   onLoginHandler = () => {
-    this.props.history.push("/");
+    this.props.history.push("/dashboard/");
   };
 
   render() {

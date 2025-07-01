@@ -7,7 +7,7 @@ import * as Icon from "react-feather";
 import Logo from "../assets/img/logo.png";
 class Signup extends React.Component {
   onSignupHandler = () => {
-    this.props.history.push("/");
+    this.props.history.push("/login/");
   };
 
   render() {
