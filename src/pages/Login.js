@@ -17,7 +17,7 @@ class Login extends React.Component {
     e.preventDefault();
     const { usuario, password } = this.state;
     try {
-      const response = await fetch("/api/auth/login", {
+      const response = await fetch("http://localhost:44355/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ usuario, password }),
