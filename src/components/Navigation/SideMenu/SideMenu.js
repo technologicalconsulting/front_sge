@@ -17,43 +17,10 @@ class SideMenu extends React.Component {
         >
           <Navbar.Collapse>
             <Nav>
-              <NavDropdown
-                title={
-                  <div className="dropdown-title">
-                    <Icon.Grid className="icon" />
-                    <span className="title">
-                      Dashboard
-                      <Icon.ChevronRight className="icon fr" />
-                    </span>
-                  </div>
-                }
-                id="basic-nav-dropdown"
-              >
-                <NavLink
-                  to="/dashboard/"
-                  className="dropdown-item"
-                  activeClassName="drpMenu"
-                >
-                  <Icon.ChevronRight className="icon" />
-                  Default Dashboard
-                </NavLink>
-                <NavLink
-                  to="/dashboard-two/"
-                  className="dropdown-item"
-                  activeClassName="drpMenu"
-                >
-                  <Icon.ChevronRight className="icon" />
-                  eCommerce Dashboard
-                </NavLink>
-                <NavLink
-                  to="/dashboard-three/"
-                  className="dropdown-item"
-                  activeClassName="drpMenu"
-                >
-                  <Icon.ChevronRight className="icon" />
-                  Analytics Dashboard
-                </NavLink>
-              </NavDropdown>
+              <NavLink to="/dashboard/" className="nav-link">
+                <Icon.Grid className="icon" />
+                <span className="title">Dashboard</span>
+              </NavLink>
 
               <NavLink to="/inbox/" className="nav-link">
                 <Icon.Inbox className="icon" />
