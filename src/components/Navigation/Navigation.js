@@ -37,9 +37,10 @@ class Navigation extends React.Component {
   };
 
   _toggleClass = () => {
-    const currentSideMenu = this.state.sideMenu;
-    this.setState({ sideMenu: !currentSideMenu });
-    this.props.onClick(this.state.sideMenu);
+    this.setState(
+      (state) => ({ sideMenu: !state.sideMenu }),
+      () => this.props.onClick(this.state.sideMenu)
+    );
   };
 
   _handleSubmit = (event) => {
